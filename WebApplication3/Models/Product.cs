@@ -4,6 +4,7 @@ namespace ApiVersioning.Models
 {
     public class Product
     {
+        [Required(ErrorMessage = "Product Id is required.")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Product name is required.")]
