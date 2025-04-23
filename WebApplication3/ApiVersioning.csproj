@@ -24,8 +24,4 @@
     <ContainerPort Include="8081" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include=".github\workflows\deploy.yml" />
-  </ItemGroup>
-
 </Project>

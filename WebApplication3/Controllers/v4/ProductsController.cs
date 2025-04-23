@@ -28,7 +28,13 @@ namespace WebApplication3.Controllers
         public IActionResult GetAllProducts()
         {
             //var products = FileHelper.LoadProducts();
-            IQueryable<Product> products = _dbContext.Products;
+            IQueryable<Product> products = _dbContext.Products.Select(x => new Product
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Price = x.Price
+            }).OrderByDescending(p => p.Price);
+            
 
             if (products.Count() == 0)
                 return NoContent(); //204

@@ -86,7 +86,7 @@ namespace WebApplication3.Controllers
 
             var newAccessToken = new JwtSecurityToken(
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(5),
+                expires: DateTime.UtcNow.AddDays(1),
                 signingCredentials: creds
             );
             var jwtAccessToken = new JwtSecurityTokenHandler().WriteToken(newAccessToken);

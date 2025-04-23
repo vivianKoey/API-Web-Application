@@ -96,7 +96,7 @@ using (var scope = app.Services.CreateScope())
 
     //seed data
     dbContext.Products.AddRange(
-        new Product { Id = 1, Name = "Laptop", Price = 5000.00M },
+        new Product { Id = 1, Name = "Laptop", Price = 5000.00M },  
         new Product { Id = 2, Name = "Smartphone", Price = 4000.00M },
         new Product { Id = 3, Name = "Chair", Price = 300.00M });
 
