@@ -53,9 +53,6 @@ jobs:
 
     env:
       Solution_Name: WebApplication3.sln
-      Test_Project_Path: src/WebApplication3.Tests/WebApplication3.Tests.csproj
-      Wap_Project_Directory: src/WebApplication3/Package
-      Wap_Project_Path: src/WebApplication3/Package/WebApplication3.Package.wapproj
       PFX_CERT: ${{ secrets.PFX_CERT }}
 
     steps:
