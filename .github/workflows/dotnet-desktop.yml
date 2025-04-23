@@ -64,6 +64,9 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
+      - name: Setup MSBuild.exe
+        uses: microsoft/setup-msbuild@v2
+      
       - name: Decode and Write Certificate
         run: |
           $certificatePath = Join-Path -Path "$(pwd)" -ChildPath "GitHubActionsWorkflow.pfx"
@@ -82,3 +85,6 @@ jobs:
         with:
           name: MSIX Package
           path: $env:Wap_Project_Directory\AppPackages
+          
+      - name: Check PATH for MSBuild
+        run: where msbuild
